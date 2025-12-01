@@ -32,13 +32,14 @@
             position: relative;
         }
 
+        /* Логотип БГУ в левом верхнем углу */
         .university-logo {
             position: absolute;
             top: 20px;
             left: 20px;
-            width: 100px; 
+            width: 100px;
             height: auto;
-            z-index: 10; 
+            z-index: 10;
         }
 
         header {
@@ -51,6 +52,15 @@
 
         .header-text {
             flex: 1;
+            /* Текст по левому краю */
+            text-align: left;
+        }
+
+        img.photo {
+            width: 160px;
+            border-radius: 10px;
+            /* Убедимся, что фото не растягивается */
+            height: auto;
         }
 
         h1 {
@@ -87,18 +97,14 @@
             color: #666;
         }
 
-        img.photo {
-            width: 160px;
-            border-radius: 10px;
-        }
-
+        /* Адаптация для мобильных */
         @media (max-width: 768px) {
             .container {
                 margin-left: 10px;
                 margin-right: 10px;
             }
             header {
-                flex-direction: column;
+                flex-direction: column-reverse; /* Сначала текст, потом фото */
                 text-align: center;
                 gap: 15px;
             }
@@ -108,23 +114,28 @@
                 width: 80px;
             }
             .header-text {
+                order: 1;
+            }
+            img.photo {
                 order: 2;
+                margin-top: 0;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Логотип БГУ в левом верхнем углу -->
         <img src="logo.png" alt="Логотип БГУ" class="university-logo">
 
         <header>
-            <img src="photo.png" alt="Фото" class="photo">
             <div class="header-text">
                 <h1>Сазонов Игорь Евгеньевич</h1>
                 <p>Магистрант 1 курса<br>
                 Белорусский государственный университет<br>
                 Факультет <b>ФПМИ</b>, кафедра <b>ИСУ</b></p>
             </div>
+            <img src="photo.png" alt="Фото" class="photo">
         </header>
 
         <section>
