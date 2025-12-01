@@ -32,11 +32,10 @@
             position: relative;
         }
 
-        /* Логотип БГУ в левом верхнем углу */
         .university-logo {
             position: absolute;
             top: 20px;
-            left: 20px;
+            right: 20px;
             width: 200px;
             height: auto;
             z-index: 10;
@@ -45,11 +44,7 @@
         header {
             padding-bottom: 20px;
             border-bottom: 2px solid #ddd;
-            text-align: left;
-        }
-
-        .header-text {
-            margin-bottom: 16px; /* ≈ 0.5 см; 1 см ≈ 38px, но 16–20px визуально мягче */
+            text-align: center;
         }
 
         img.photo {
@@ -57,7 +52,11 @@
             border-radius: 10px;
             height: auto;
             display: block;
-            margin-top: 16px; /* отступ от текста ~0.5–1 см */
+            margin: 0 auto 16px;
+        }
+
+        .header-text {
+            text-align: center;
         }
 
         h1 {
@@ -94,7 +93,6 @@
             color: #666;
         }
 
-        /* Адаптация для мобильных */
         @media (max-width: 768px) {
             .container {
                 margin-left: 10px;
@@ -109,30 +107,21 @@
             header {
                 text-align: center;
             }
-            .header-text,
-            img.photo {
-                margin-left: auto;
-                margin-right: auto;
-            }
-            img.photo {
-                margin-top: 20px;
-            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Логотип БГУ в левом верхнем углу -->
         <img src="logo.png" alt="Логотип БГУ" class="university-logo">
 
         <header>
+            <img src="photo.png" alt="Фото" class="photo">
             <div class="header-text">
                 <h1>Сазонов Игорь Евгеньевич</h1>
                 <p>Магистрант 1 курса<br>
                 Белорусский государственный университет<br>
                 Факультет <b>ФПМИ</b>, кафедра <b>ИСУ</b></p>
             </div>
-            <img src="photo.png" alt="Фото" class="photo">
         </header>
 
         <section>
@@ -153,18 +142,18 @@
         </section>
 
         <section>
-    <h2>Работы и рефераты</h2>
-    <ul>
-        <li>
-            <strong>Реферат по КДЗ «Основы информационных технологий»</strong><br>
-            Скачать реферат: <a href="files/referat.pdf">referat.pdf</a><br>
-            Презентация: <a href="files/referat_presentation.pptx">referat_presentation.pptx</a>
-        </li>
-        <li>
-            <strong>Дипломная работа</strong><br>
-            Скачать работу: <a href="files/diploma.pdf">diploma.pdf</a>
-        </li>
-    </ul>
+            <h2>Работы и рефераты</h2>
+            <ul>
+                <li>
+                    <strong>Реферат по КДЗ «Основы информационных технологий»</strong><br>
+                    Скачать реферат: <a href="files/referat.pdf">referat.pdf</a><br>
+                    Презентация: <a href="files/referat_presentation.pptx">referat_presentation.pptx</a>
+                </li>
+                <li>
+                    <strong>Дипломная работа</strong><br>
+                    Скачать работу: <a href="files/diploma.pdf">diploma.pdf</a>
+                </li>
+            </ul>
         </section>
 
         <section>
