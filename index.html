@@ -2,15 +2,43 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Сайт магистранта</title>
     <style>
+        /* Полноэкранный фон */
         body {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+
+            /* Фон на весь экран */
+            background-image: url('bg.avif');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            /* Добавим небольшой отступ сверху/снизу, если нужно */
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        /* Белый контейнер с отступами 5 см слева и справа */
+        .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
-            line-height: 1.6;
-            color: #222;
+
+            /* Основной стиль: белый фон, тень для акцента */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+            /* 5 см = 50 мм ≈ 141px, но лучше использовать `cm` или `vw` */
+            margin-left: 5cm;
+            margin-right: 5cm;
         }
 
         header {
@@ -56,60 +84,67 @@
             text-align: center;
             color: #666;
         }
+
+        /* Адаптация для мобильных: на узких экранах 5 см — слишком много */
+        @media (max-width: 768px) {
+            .container {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
     </style>
 </head>
-
 <body>
-<header>
-    <img src="photo.png" alt="Фото" class="photo">
-    <div>
-        <h1>Сазонов Игорь Евгеньевич</h1>
-        <p>Магистрант 1 курса<br>
-        Белорусский государственный университет<br>
-        Факультет <b>ФПМИ</b>, кафедра <b>ИСУ</b></p>
+    <div class="container">
+        <header>
+            <img src="photo.png" alt="Фото" class="photo">
+            <div>
+                <h1>Сазонов Игорь Евгеньевич</h1>
+                <p>Магистрант 1 курса<br>
+                Белорусский государственный университет<br>
+                Факультет <b>ФПМИ</b>, кафедра <b>ИСУ</b></p>
+            </div>
+        </header>
+
+        <section>
+            <h2>Образование</h2>
+            <ul>
+                <li>2025–2027 — магистратура, БГУ, ФПМИ, кафедра ИСУ, специальность «Прикладная математика и информатика»</li>
+                <li>2021–2025 — бакалавриат, БГУ, ФПМИ, кафедра ВычМат, специальность «Прикладная математика(научно-производственная деятельность)»</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Научные интересы</h2>
+            <ul>
+                <li>Машинное обучение</li>
+                <li>Мультимодальный анализ данных</li>
+                <li>Обучение с подкреплением</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Работы и рефераты</h2>
+            
+            <h3>Реферат по КДЗ «Основы информационных технологий»</h3>
+            <p>Скачать реферат: <a href="files/referat.pdf">referat.pdf</a></p>
+            <p>Презентация: <a href="files/referat_presentation.pptx">referat_presentation.pptx</a></p>
+
+            <h3>Дипломная работа</h3>
+            <p>Скачать работу: <a href="files/diploma.pdf">diploma.pdf</a></p>
+        </section>
+
+        <section>
+            <h2>Контакты</h2>
+            <p>
+                Email: <a href="mailto:RadiaziaLewis@yandex.by">RadiaziaLewis@yandex.by</a><br>
+                GitHub: <a href="https://github.com/Radiazia">Radiazia</a>
+            </p>
+        </section>
+
+        <footer>
+            © 2025 Сазонов И.Е., БГУ
+        </footer>
     </div>
-</header>
-
-<section>
-    <h2>Образование</h2>
-    <ul>
-        <li>2025–2027 — магистратура, БГУ, ФПМИ, кафедра ИСУ, специальность «Прикладная математика и информатика»</li>
-        <li>2021–2025 — бакалавриат, БГУ, ФПМИ, кафедра ВычМат, специальность «Прикладная математика(научно-производственная деятельность)»</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Научные интересы</h2>
-    <ul>
-        <li>Машинное обучение</li>
-        <li>Мультимодальный анализ данных</li>
-        <li>Обучение с подкреплением</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Работы и рефераты</h2>
-    
-    <h3>Реферат по КДЗ «Основы информационных технологий»</h3>
-    <p>Скачать реферат: <a href="files/referat.pdf">referat.pdf</a></p>
-    <p>Презентация: <a href="files/referat_presentation.pptx">referat_presentation.pptx</a></p>
-
-    <h3>Дипломная работа</h3>
-    <p>Скачать работу: <a href="files/diploma.pdf">diploma.pdf</a></p>
-</section>
-
-
-<section>
-    <h2>Контакты</h2>
-    <p>
-        Email: <a href="mailto:RadiaziaLewis@yandex.by">RadiaziaLewis@yandex.by</a><br>
-        GitHub: <a href="https://github.com/Radiazia">https://github.com/Radiazia</a>
-    </p>
-</section>
-
-<footer>
-    © 2025 Бушлякова М.Д., БГУ
-</footer>
-
 </body>
 </html>
